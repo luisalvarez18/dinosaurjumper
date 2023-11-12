@@ -75,7 +75,7 @@ function Start() {
     dino = document.querySelector(".dino");
     document.addEventListener("keydown", HandleKeyDown);
     contenedor.addEventListener("click", HandleOnClick);
-    contenedor.addEventListener("touchstart", function(e){Saltar();})
+    contenedor.addEventListener("touchend", function(e){Saltar();})
 }
 
 function Update() {
