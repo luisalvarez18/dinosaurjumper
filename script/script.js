@@ -74,6 +74,7 @@ function Start() {
     textoScore = document.querySelector(".score");
     dino = document.querySelector(".dino");
     document.addEventListener("keydown", HandleKeyDown);
+    contenedor.addEventListener("click", HandleOnClick);
 }
 
 function Update() {
@@ -103,6 +104,15 @@ function HandleKeyDown(ev){
         } else {
             dino.classList.add("dino-corriendo");
         }
+    }
+}
+
+function HandleOnClick(){
+    parado = !parado;
+    if (parado == true) {
+        dino.classList.remove("dino-corriendo");
+    } else {
+        dino.classList.add("dino-corriendo");
     }
 }
 
