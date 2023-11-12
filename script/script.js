@@ -75,6 +75,7 @@ function Start() {
     dino = document.querySelector(".dino");
     document.addEventListener("keydown", HandleKeyDown);
     contenedor.addEventListener("click", HandleOnClick);
+    contenedor.addEventListener("touchstart", function(e){Saltar();})
 }
 
 function Update() {
@@ -108,12 +109,7 @@ function HandleKeyDown(ev){
 }
 
 function HandleOnClick(){
-    parado = !parado;
-    if (parado == true) {
-        dino.classList.remove("dino-corriendo");
-    } else {
-        dino.classList.add("dino-corriendo");
-    }
+    Saltar();
 }
 
 function Saltar(){
