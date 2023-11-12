@@ -74,8 +74,8 @@ function Start() {
     textoScore = document.querySelector(".score");
     dino = document.querySelector(".dino");
     document.addEventListener("keydown", HandleKeyDown);
-    contenedor.addEventListener("click", Saltar);
-    contenedor.addEventListener("touchend", Saltar)
+    contenedor.addEventListener("click", HandleOnClick);
+    contenedor.addEventListener("touchend", HandleOnTouch);
 }
 
 function Update() {
@@ -109,6 +109,10 @@ function HandleKeyDown(ev){
 }
 
 function HandleOnClick(){
+    Saltar();
+}
+
+function HandleOnTouch(){
     Saltar();
 }
 
